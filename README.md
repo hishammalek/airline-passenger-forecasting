@@ -7,11 +7,15 @@
 ---
 
 ## **Project Overview**
-Analyzed the **Airline Passenger dataset (1949-1960)** to understand passenger demand trends and seasonal patterns
+This project analyzes **Airline Passenger dataset (1949–1960)** to understand long-term trends and seasonal patterns, and to build forecasting models for future demand prediction
 
-The goal is to build a forecasting model that can predict future passenger demand and to support airline planning in all aspects
-ARIMA and SARIMA models were used to compare forecasting performance
-The final model helps identify seasonal peaks and long-term proportional growth in air travel demand
+Two models were developed:
+- ARIMA (baseline model without seasonality)
+- SARIMA (seasonal model capturing yearly patterns)
+
+The objective is to determine which model provides more accurate and realistic forecasts for airline passenger demand based on historical data patterns.
+
+Final insights are presented through a Power BI dashboard to support business decision-making in capacity planning and operations.
 
 ---
 
@@ -48,8 +52,8 @@ Power BI:
 - Data cleaning and preprocessing
 - Exploratory time series analysis
 - Feature engineering (trend & seasonality)
-- ARIMA baseline modeling
-- SARIMA seasonal modeling
+- Built ARIMA as baseline to capture trend-only structure
+- Extended to SARIMA to incorporate seasonal patterns
 - Model evaluation using Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE)
 - Forecast visualizations and comparison
 
@@ -59,14 +63,14 @@ Power BI:
 
 1. Passenger demand shows a **strong long-term upward trend**
 2. Clear **seasonal fluctuations** with peak travel mid-year and lowest on Nov - Feb
-3. SARIMA was selected as the **final model due to significantly lower error and its ability to capture seasonal demand patterns**
+3. SARIMA was selected as the **final model due to significantly lower error and its ability to capture seasonal demand patterns more accurately than ARIMA**
 4. Forecasts show **continued proportional growth** in air travel demand throughout the years
 
 ---
 
 ## **Model Performance**
 - **ARIMA: (1,1,0)** baseline model with no seasonality and AIC score of 1401.85
-- **SARIMA: Final model (1,1,0)(1,1,0,12)** improved performance with seasonal componennt and AIC score of 1020.393
+- **SARIMA: Final model (1,1,0)(1,1,0,12)** improved performance with seasonal component and AIC score of 1020.393
 - Evaluation metrics:
   - **RMSE: 20.81 (3.35%)**
   - **MAE: 15.99 (2.57%)** 
@@ -74,6 +78,8 @@ Power BI:
 ---
 
 ## **Business Impact**
+
+These insights are translated into operational recommendations for airline planning teams.
 
 - Helps airlines **plan capacity** during peak travel seasons
 - Optimize **staffing, scheduling decisions and resource allocation**
@@ -110,20 +116,21 @@ Organized project into modular folders for reproducibility and Power BI integrat
 
 ---
 
-
 ## **Visuals**
 
+Final results are visualized through a Power BI dashboard to support interactive exploration of trends and forecasts
+
 ### Executive Overview
-![airline-passenger-forecasting](assets/images/01_executive_overview.png)
+![airline-passenger-forecasting](assets/images/powerbi/01_executive_overview.png)
 
 ### Trend & Seasonality
-![airline-passenger-forecasting](assets/images/02_trend_seasonality.png)
+![airline-passenger-forecasting](assets/images/powerbi/02_trend_seasonality.png)
 
 ### Forecast vs Actual
-![airline-passenger-forecasting](assets/images/03_forecast_actual.png)
+![airline-passenger-forecasting](assets/images/powerbi/03_forecast_actual.png)
 
 ### Business Insights
-![airline-passenger-forecasting](assets/images/04_business_insights.png)
+![airline-passenger-forecasting](assets/images/powerbi/04_business_insights.png)
 
 Click on the Power BI file in the `powerbi/` folder to explore the interactive dashboard.
 
